@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/csv"
+	"fmt"
 	"log"
 	"mainPract/repository"
 	"os"
@@ -67,19 +68,53 @@ func main() {
 	//	}
 	//	fmt.Printf("row: col1=%d", col1)
 	//}
-	var query_string = "INSERT INTO main_table VALUES ("
+	var query_string = "INSERT INTO main_table ("
 	var csvMet = CsvProp{}
-	var flag = false
-	for _, i := range csvMet.parceCsvFile("./test2.csv") {
-		if flag {
-			for _, j := range i {
+	//var flag = true
+	var flag2 = false
+	var counter = 0
+	var counter2 = 0
+	reader := csvMet.parceCsvFile("./test2.csv")
+
+	for _, i := range reader {
+		counter = 0
+		for _, j := range reader[0] {
+			counter += 1
+			if counter == len(i) {
+				//flag = false
+				flag2 = true
+				query_string += j + ") VALUES ("
+			} else {
 				query_string += j + ","
 			}
 		}
-		flag = true
+
+		if flag2 {
+			counter = 0
+			for _, j := range i {
+				counter += 1
+				if counter == len(i) {
+					query_string += j + ")"
+				} else {
+					query_string += j + ","
+				}
+			}
+		}
+		flag2 = true
+		//if err = conn.Exec(ctx, query_string, false); err != nil {
+		//	log.Fatal(err.Error())
+		//	break
+		//}
+		counter2 += 1
+		if counter2 == 2 {
+			if err = conn.Exec(ctx, query_string, false); err != nil {
+				log.Fatal(err.Error())
+				break
+			}
+			break
+		}
+		query_string = "INSERT INTO main_table ("
 	}
-	query_string += ")"
-	if err = conn.AsyncInsert(ctx, query_string, false); err != nil {
-		log.Fatal(err.Error())
-	}
+
+	fmt.Print("All right")
 }
