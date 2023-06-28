@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/csv"
 	"fmt"
+	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 	"log"
 	"mainPract/repository"
 	"os"
@@ -148,7 +149,16 @@ func timer(name string) func() {
 	}
 }
 
+func insert_to_db(insertQueries string, ctx context.Context, conn driver.Conn, c chan int, id int) {
+	if err := conn.AsyncInsert(ctx, insertQueries, false); err != nil && err.Error() != "EOF" {
+		log.Fatal(err.Error())
+	}
+	c <- id
+}
+
 func main() {
+
+	c := make(chan int)
 	defer timer("main")()
 
 	var db = repository.DbClick{}
@@ -185,10 +195,20 @@ func main() {
 	//	}
 	//}
 
-	for _, query := range insertQueries {
-		if err := conn.AsyncInsert(ctx, query, false); err != nil && err.Error() != "EOF" {
-			log.Fatal(err.Error())
-		}
+	//for _, query := range insertQueries {
+	//	if err := conn.AsyncInsert(ctx, query, false); err != nil && err.Error() != "EOF" {
+	//		log.Fatal(err.Error())
+	//	}
+	//}
+	//go insert_to_db(insertQueries, ctx, conn, c)
+
+	for i := 0; i < len(insertQueries); i++ {
+		go insert_to_db(insertQueries[i], ctx, conn, c, i)
+	}
+
+	for i := 0; i < len(insertQueries); i++ {
+		gopherID := <-c
+		fmt.Println("gopher", gopherID, "func is ready")
 	}
 
 	fmt.Println("All right")
