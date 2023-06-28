@@ -55,11 +55,7 @@ func getTypes(reader [][]string, n int) []string {
 		Bool     int
 		String   int
 	}
-	var tps []tp
-	for i := 0; i < len(reader[0]); i++ {
-		var types tp
-		tps = append(tps, types)
-	}
+	tps := make([]tp, len(reader[0]))
 	for index, i := range reader[1:] {
 		if index == n {
 			break
@@ -79,33 +75,32 @@ func getTypes(reader [][]string, n int) []string {
 			}
 		}
 	}
-	var types []string
-	for _, tp := range tps {
+	types := make([]string, len(tps))
+	for i, tp := range tps {
 		if tp.Bool == n {
-			types = append(types, "Bool")
+			types[i] = "Bool"
 		} else if tp.Int == n {
-			types = append(types, "Int")
+			types[i] = "Int"
 		} else if tp.Datetime == n {
-			types = append(types, "Datetime")
+			types[i] = "Datetime"
 		} else {
-			types = append(types, "String")
+			types[i] = "String"
 		}
 	}
 	return types
-} // Проверяет на типы первые n строк файла и возвращает массив типов для каждого столбца соответственно
+}
 
 func getSQL(reader [][]string, dbName string, tableName string) (createQuery string, insertQuerys []string) {
-
-	var types = getTypes(reader, 5)
+	types := getTypes(reader, 5)
 
 	createQuery = fmt.Sprintf("CREATE TABLE IF NOT EXISTS %s.%s (", dbName, tableName)
 	for n, columnName := range reader[0] {
 		createQuery += strings.Replace(columnName, " ", "_", -1) + " " + types[n] + ", "
 	}
 	createQuery = strings.TrimRight(createQuery, ", ")
-	createQuery += ") ENGINE = Memory AS SELECT 1;\n"
+	createQuery += ") ENGINE = Memory;\n"
 
-	var dt = "1/2/2006 3:04:05 PM"
+	dt := "1/2/2006 3:04:05 PM"
 
 	for _, i := range reader[1:] {
 		for n, j := range i {
@@ -129,29 +124,33 @@ func getSQL(reader [][]string, dbName string, tableName string) (createQuery str
 		}
 	}
 
+	insertQuerys = make([]string, 0, len(reader)/25000+1)
+
 	for i := 1; i < len(reader); i += 25000 {
-		var query []string
-		var n = i + 25000
-		if i+25000 >= len(reader) {
+		n := i + 25000
+		if n > len(reader) {
 			n = len(reader)
 		}
+		query := make([]string, 0, n-i)
 		for _, j := range reader[i:n] {
-			query = append(query, strings.Join(j, ", "))
+			query = append(query, "("+strings.Join(j, ", ")+")")
 		}
-		insertQuerys = append(insertQuerys, fmt.Sprintf("INSERT INTO %s.%s (*) VALUES (", dbName, tableName)+strings.Join(query, "), (")+")")
+		insertQuerys = append(insertQuerys, fmt.Sprintf("INSERT INTO %s.%s (*) VALUES ", dbName, tableName)+
+			strings.Join(query, ", "))
 	}
 	return createQuery, insertQuerys
-} // формирует и возвращает запрос создания таблицы и массив запросов вставки данных чанками по 25000
+}
 
 func timer(name string) func() {
 	start := time.Now()
 	return func() {
 		fmt.Printf("%s took %v\n", name, time.Since(start))
 	}
-} // Просто таймер, чтобы посмотреть за сколько выполняется парсинг
+}
 
 func main() {
 	defer timer("main")()
+
 	var db = repository.DbClick{}
 
 	conn, err := db.Connect()
@@ -166,9 +165,9 @@ func main() {
 	var tableName = "main_table"
 	var dbName = "default"
 
-	fmt.Println("Create querys...")
+	fmt.Println("Create queries...")
 
-	createQuery, insertQuerys := getSQL(reader, dbName, tableName)
+	createQuery, insertQueries := getSQL(reader, dbName, tableName)
 	_, err = conn.Query(ctx, createQuery)
 
 	fmt.Println("Create table...")
@@ -180,8 +179,14 @@ func main() {
 
 	fmt.Println("Insert data...")
 
-	for _, i := range insertQuerys {
-		if _, err := conn.Query(ctx, i); err != nil && err.Error() != "EOF" {
+	//for _, query := range insertQueries {
+	//	if _, err := conn.Query(ctx, query); err != nil && err.Error() != "EOF" {
+	//		log.Fatal(err.Error())
+	//	}
+	//}
+
+	for _, query := range insertQueries {
+		if err := conn.AsyncInsert(ctx, query, false); err != nil && err.Error() != "EOF" {
 			log.Fatal(err.Error())
 		}
 	}
