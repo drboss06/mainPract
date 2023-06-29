@@ -1,0 +1,9 @@
+i32_i32
+i32_i64
+i64_i32
+i64_i64
+microdict
+microdict\mdict
+microdict\microdict_tests
+microdict\run_tests
+str_str

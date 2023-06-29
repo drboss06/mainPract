@@ -1,0 +1,49 @@
+digraph graph2 {
+	node [color="#2d137d" fontcolor="#2d137d" fontsize=12.0 image="1.png" shape=plaintext size=2]
+	edge [color="#2d137d" fontcolor="#2d137d"]
+	"Create Purchase Order Item" [label="Create Purchase Order Item
+             63797\l"]
+	"Receive Order Confirmation" [label="Receive Order Confirmation
+             7212\l"]
+	"Record Goods Receipt" [label="Record Goods Receipt
+             60246\l"]
+	"Vendor creates invoice" [label="Vendor creates invoice
+             53326\l"]
+	"Record Invoice Receipt" [label="Record Invoice Receipt
+             53326\l"]
+	"Clear Invoice" [label="Clear Invoice
+             53326\l"]
+	"Change Quantity" [label="Change Quantity
+             1717\l"]
+	"Remove Payment Block" [label="Remove Payment Block
+             10850\l"]
+	"Change Price" [label="Change Price
+             1087\l"]
+	"Delete Purchase Order Item" [label="Delete Purchase Order Item
+             3834\l"]
+	startevent [label="" image=""]
+	endevent [label="" image=""]
+	startevent -> "Change Price"
+	startevent -> "Change Quantity"
+	startevent -> "Create Purchase Order Item"
+	startevent -> "Delete Purchase Order Item"
+	startevent -> "Receive Order Confirmation"
+	startevent -> "Vendor creates invoice"
+	"Clear Invoice" -> endevent
+	"Create Purchase Order Item" -> endevent
+	"Delete Purchase Order Item" -> endevent
+	"Record Goods Receipt" -> endevent
+	"Record Invoice Receipt" -> "Clear Invoice" [label=0.0]
+	"Receive Order Confirmation" -> "Delete Purchase Order Item" [label=0.0]
+	"Receive Order Confirmation" -> "Record Goods Receipt" [label=0.0]
+	"Record Goods Receipt" -> "Remove Payment Block" [label=0.0]
+	"Remove Payment Block" -> "Clear Invoice" [label=0.0]
+	"Record Goods Receipt" -> "Clear Invoice" [label=0.0]
+	"Change Price" -> "Vendor creates invoice" [label=0.0]
+	"Change Quantity" -> "Record Invoice Receipt" [label=0.0]
+	"Create Purchase Order Item" -> "Record Goods Receipt" [label=0.0]
+	"Vendor creates invoice" -> "Record Invoice Receipt" [label=0.0]
+	"Record Invoice Receipt" -> "Remove Payment Block" [label=0.0]
+	"Receive Order Confirmation" -> "Vendor creates invoice" [label=0.0]
+	"Change Price" -> "Record Goods Receipt" [label=0.0]
+}

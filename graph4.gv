@@ -1,0 +1,67 @@
+digraph graph4 {
+	node [color="#2d137d" fontcolor="#2d137d" fontsize=12.0 image="1.png" shape=plaintext size=2]
+	edge [color="#2d137d" fontcolor="#2d137d"]
+	"Create Purchase Order Item" [label="Create Purchase Order Item
+             63797\l"]
+	"Receive Order Confirmation" [label="Receive Order Confirmation
+             7212\l"]
+	"Record Goods Receipt" [label="Record Goods Receipt
+             60246\l"]
+	"Vendor creates invoice" [label="Vendor creates invoice
+             53326\l"]
+	"Record Invoice Receipt" [label="Record Invoice Receipt
+             53326\l"]
+	"Clear Invoice" [label="Clear Invoice
+             53326\l"]
+	"Change Quantity" [label="Change Quantity
+             1717\l"]
+	"Remove Payment Block" [label="Remove Payment Block
+             10850\l"]
+	"Change Price" [label="Change Price
+             1087\l"]
+	"Delete Purchase Order Item" [label="Delete Purchase Order Item
+             3834\l"]
+	startevent [label="" image=""]
+	endevent [label="" image=""]
+	"Create Purchase Order Item -> Record Invoice Receipt" [label="Create Purchase Order Item -> Record Invoice Receipt
+             None\l"]
+	"Record Invoice Receipt -> Clear Invoice" [label="Record Invoice Receipt -> Clear Invoice
+             None\l"]
+	"Remove Payment Block -> Clear Invoice" [label="Remove Payment Block -> Clear Invoice
+             None\l"]
+	"Change Quantity -> Record Invoice Receipt" [label="Change Quantity -> Record Invoice Receipt
+             None\l"]
+	"Vendor creates invoice -> Record Invoice Receipt" [label="Vendor creates invoice -> Record Invoice Receipt
+             None\l"]
+	"Record Invoice Receipt -> Remove Payment Block" [label="Record Invoice Receipt -> Remove Payment Block
+             None\l"]
+	"Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item" [label="Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item
+             None\l"]
+	startevent -> "Create Purchase Order Item"
+	startevent -> "Vendor creates invoice"
+	startevent -> "Change Quantity"
+	startevent -> "Change Price"
+	startevent -> "Delete Purchase Order Item"
+	startevent -> "Receive Order Confirmation"
+	"Clear Invoice" -> endevent
+	"Create Purchase Order Item" -> endevent
+	"Delete Purchase Order Item" -> endevent
+	"Change Quantity" -> endevent
+	"Receive Order Confirmation" -> endevent
+	"Create Purchase Order Item" -> "Create Purchase Order Item -> Record Invoice Receipt"
+	"Create Purchase Order Item -> Record Invoice Receipt" -> "Record Invoice Receipt"
+	"Record Invoice Receipt" -> "Record Invoice Receipt -> Clear Invoice"
+	"Record Invoice Receipt -> Clear Invoice" -> "Clear Invoice"
+	"Remove Payment Block" -> "Remove Payment Block -> Clear Invoice"
+	"Remove Payment Block -> Clear Invoice" -> "Clear Invoice"
+	"Change Quantity" -> "Change Quantity -> Record Invoice Receipt"
+	"Change Quantity -> Record Invoice Receipt" -> "Record Invoice Receipt"
+	"Vendor creates invoice" -> "Vendor creates invoice -> Record Invoice Receipt"
+	"Vendor creates invoice -> Record Invoice Receipt" -> "Record Invoice Receipt"
+	"Record Invoice Receipt" -> "Record Invoice Receipt -> Remove Payment Block"
+	"Record Invoice Receipt -> Remove Payment Block" -> "Remove Payment Block"
+	"Change Price" -> "Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item"
+	"Receive Order Confirmation" -> "Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item"
+	"Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item" -> "Vendor creates invoice"
+	"Change Price,Receive Order Confirmation -> Vendor creates invoice,Delete Purchase Order Item" -> "Delete Purchase Order Item"
+}
