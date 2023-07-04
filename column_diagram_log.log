@@ -1,0 +1,22 @@
+2023-07-04 14:36:24,530 INFO clickhouse connection successful
+2023-07-04 14:36:24,711 INFO query successful
+2023-07-04 14:36:24,711 INFO call calc_diagram_days
+2023-07-04 14:36:25,148 INFO clickhouse connection successful
+2023-07-04 14:36:25,308 INFO query successful
+2023-07-04 14:36:25,318 INFO call calc_diagram_months
+2023-07-04 14:40:13,127 INFO clickhouse connection successful
+2023-07-04 14:40:13,319 INFO query successful
+2023-07-04 14:40:13,319 INFO call calc_diagram_days
+2023-07-04 14:40:13,319 INFO call calc_diagram_months
+2023-07-04 15:13:28,526 INFO clickhouse connection successful
+2023-07-04 15:13:28,667 INFO query successful
+2023-07-04 15:13:28,667 INFO call calc_diagram_days
+2023-07-04 15:13:28,667 INFO call calc_diagram_months
+2023-07-04 15:19:10,286 WARNING Retrying (Retry(total=0, connect=None, read=None, redirect=0, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025481E57EE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /?wait_end_of_query=1
+2023-07-04 15:19:10,286 WARNING Unexpected Http Driver Exception
+2023-07-04 15:19:10,286 ERROR clickhouse connection failed
+2023-07-04 15:19:10,302 ERROR query failed
+2023-07-04 15:19:21,765 INFO clickhouse connection successful
+2023-07-04 15:19:21,906 INFO query successful
+2023-07-04 15:19:21,906 INFO call calc_diagram_days
+2023-07-04 15:19:21,906 INFO call calc_diagram_months
