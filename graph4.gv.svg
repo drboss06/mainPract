@@ -12,7 +12,7 @@
 <!-- Create Purchase Order Item -->
 <g id="node1" class="node">
 <title>Create Purchase Order Item</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="60.8735" y="-540"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="60.8735" y="-540"/>
 <text text-anchor="middle" x="164.87" y="-525.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Create Purchase Order Item</text>
 <text text-anchor="middle" x="164.87" y="-512.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">63797</text>
 </g>
@@ -27,14 +27,14 @@
 <polygon fill="#2d137d" stroke="#2d137d" points="432.83,-25.78 442.47,-21.37 432.19,-18.81 432.83,-25.78"/>
 </g>
 <!-- Create Purchase Order Item &#45;&gt; Record Invoice Receipt -->
-<g id="node14" class="node">
+<g id="node17" class="node">
 <title>Create Purchase Order Item &#45;&gt; Record Invoice Receipt</title>
-<image xlink:href="11.png" width="270px" height="36px" preserveAspectRatio="xMinYMin meet" x="29.8735" y="-468"/>
+<image xlink:href="1.png" width="270px" height="36px" preserveAspectRatio="xMinYMin meet" x="29.8735" y="-468"/>
 <text text-anchor="middle" x="164.87" y="-453.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Create Purchase Order Item &#45;&gt; Record Invoice Receipt</text>
 <text text-anchor="middle" x="164.87" y="-440.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
 <!-- Create Purchase Order Item&#45;&gt;Create Purchase Order Item &#45;&gt; Record Invoice Receipt -->
-<g id="edge14" class="edge">
+<g id="edge20" class="edge">
 <title>Create Purchase Order Item&#45;&gt;Create Purchase Order Item &#45;&gt; Record Invoice Receipt</title>
 <path fill="none" stroke="#2d137d" d="M164.87,-504.05C164.87,-496.57 164.87,-487.58 164.87,-479.14"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="168.37,-479.3 164.87,-469.3 161.37,-479.3 168.37,-479.3"/>
@@ -42,7 +42,7 @@
 <!-- Receive Order Confirmation -->
 <g id="node2" class="node">
 <title>Receive Order Confirmation</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="215.874" y="-684"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="215.874" y="-684"/>
 <text text-anchor="middle" x="319.87" y="-669.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Receive Order Confirmation</text>
 <text text-anchor="middle" x="319.87" y="-656.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">7212</text>
 </g>
@@ -55,7 +55,7 @@
 <!-- Change Price,Receive Order Confirmation &#45;&gt; Vendor creates invoice,Delete Purchase Order Item -->
 <g id="node19" class="node">
 <title>Change Price,Receive Order Confirmation &#45;&gt; Vendor creates invoice,Delete Purchase Order Item</title>
-<image xlink:href="11.png" width="275px" height="36px" preserveAspectRatio="xMinYMin meet" x="519.374" y="-612"/>
+<image xlink:href="1.png" width="275px" height="36px" preserveAspectRatio="xMinYMin meet" x="519.374" y="-612"/>
 <text text-anchor="middle" x="656.87" y="-597.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Change Price,Receive Order Confirmation &#45;&gt; Vendor creates invoice,Delete Purchase Order Item</text>
 <text text-anchor="middle" x="656.87" y="-584.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
@@ -68,26 +68,26 @@
 <!-- Record Goods Receipt -->
 <g id="node3" class="node">
 <title>Record Goods Receipt</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="594.874" y="-756"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="594.874" y="-756"/>
 <text text-anchor="middle" x="698.87" y="-741.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Record Goods Receipt</text>
 <text text-anchor="middle" x="698.87" y="-728.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">60246</text>
 </g>
 <!-- Vendor creates invoice -->
 <g id="node4" class="node">
 <title>Vendor creates invoice</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="374.874" y="-540"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="374.874" y="-540"/>
 <text text-anchor="middle" x="478.87" y="-525.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Vendor creates invoice</text>
 <text text-anchor="middle" x="478.87" y="-512.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">53326</text>
 </g>
 <!-- Vendor creates invoice &#45;&gt; Record Invoice Receipt -->
-<g id="node18" class="node">
+<g id="node13" class="node">
 <title>Vendor creates invoice &#45;&gt; Record Invoice Receipt</title>
-<image xlink:href="11.png" width="245px" height="36px" preserveAspectRatio="xMinYMin meet" x="356.374" y="-468"/>
+<image xlink:href="1.png" width="245px" height="36px" preserveAspectRatio="xMinYMin meet" x="356.374" y="-468"/>
 <text text-anchor="middle" x="478.87" y="-453.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Vendor creates invoice &#45;&gt; Record Invoice Receipt</text>
 <text text-anchor="middle" x="478.87" y="-440.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
 <!-- Vendor creates invoice&#45;&gt;Vendor creates invoice &#45;&gt; Record Invoice Receipt -->
-<g id="edge22" class="edge">
+<g id="edge12" class="edge">
 <title>Vendor creates invoice&#45;&gt;Vendor creates invoice &#45;&gt; Record Invoice Receipt</title>
 <path fill="none" stroke="#2d137d" d="M478.87,-504.05C478.87,-496.57 478.87,-487.58 478.87,-479.14"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="482.37,-479.3 478.87,-469.3 475.37,-479.3 482.37,-479.3"/>
@@ -95,40 +95,40 @@
 <!-- Record Invoice Receipt -->
 <g id="node5" class="node">
 <title>Record Invoice Receipt</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="377.874" y="-396"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="377.874" y="-396"/>
 <text text-anchor="middle" x="481.87" y="-381.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Record Invoice Receipt</text>
 <text text-anchor="middle" x="481.87" y="-368.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">53326</text>
 </g>
-<!-- Record Invoice Receipt &#45;&gt; Remove Payment Block -->
-<g id="node15" class="node">
-<title>Record Invoice Receipt &#45;&gt; Remove Payment Block</title>
-<image xlink:href="11.png" width="251px" height="36px" preserveAspectRatio="xMinYMin meet" x="356.374" y="-324"/>
-<text text-anchor="middle" x="481.87" y="-309.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Record Invoice Receipt &#45;&gt; Remove Payment Block</text>
-<text text-anchor="middle" x="481.87" y="-296.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
-</g>
-<!-- Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Remove Payment Block -->
-<g id="edge16" class="edge">
-<title>Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Remove Payment Block</title>
-<path fill="none" stroke="#2d137d" d="M481.87,-360.05C481.87,-352.57 481.87,-343.58 481.87,-335.14"/>
-<polygon fill="#2d137d" stroke="#2d137d" points="485.37,-335.3 481.87,-325.3 478.37,-335.3 485.37,-335.3"/>
-</g>
 <!-- Record Invoice Receipt &#45;&gt; Clear Invoice -->
-<g id="node17" class="node">
+<g id="node15" class="node">
 <title>Record Invoice Receipt &#45;&gt; Clear Invoice</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="592.874" y="-252"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="592.874" y="-252"/>
 <text text-anchor="middle" x="696.87" y="-237.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Record Invoice Receipt &#45;&gt; Clear Invoice</text>
 <text text-anchor="middle" x="696.87" y="-224.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
 <!-- Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Clear Invoice -->
-<g id="edge20" class="edge">
+<g id="edge16" class="edge">
 <title>Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Clear Invoice</title>
 <path fill="none" stroke="#2d137d" d="M541.15,-360.09C565.56,-351.52 593.33,-339.57 615.87,-324 640.84,-306.75 663.55,-280.43 678.53,-260.88"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="681.15,-263.22 684.33,-253.11 675.54,-259.03 681.15,-263.22"/>
 </g>
+<!-- Record Invoice Receipt &#45;&gt; Remove Payment Block -->
+<g id="node16" class="node">
+<title>Record Invoice Receipt &#45;&gt; Remove Payment Block</title>
+<image xlink:href="1.png" width="251px" height="36px" preserveAspectRatio="xMinYMin meet" x="356.374" y="-324"/>
+<text text-anchor="middle" x="481.87" y="-309.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Record Invoice Receipt &#45;&gt; Remove Payment Block</text>
+<text text-anchor="middle" x="481.87" y="-296.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
+</g>
+<!-- Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Remove Payment Block -->
+<g id="edge18" class="edge">
+<title>Record Invoice Receipt&#45;&gt;Record Invoice Receipt &#45;&gt; Remove Payment Block</title>
+<path fill="none" stroke="#2d137d" d="M481.87,-360.05C481.87,-352.57 481.87,-343.58 481.87,-335.14"/>
+<polygon fill="#2d137d" stroke="#2d137d" points="485.37,-335.3 481.87,-325.3 478.37,-335.3 485.37,-335.3"/>
+</g>
 <!-- Clear Invoice -->
 <g id="node6" class="node">
 <title>Clear Invoice</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-108"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-108"/>
 <text text-anchor="middle" x="470.87" y="-93.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Clear Invoice</text>
 <text text-anchor="middle" x="470.87" y="-80.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">53326</text>
 </g>
@@ -141,7 +141,7 @@
 <!-- Change Quantity -->
 <g id="node7" class="node">
 <title>Change Quantity</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="623.874" y="-540"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="623.874" y="-540"/>
 <text text-anchor="middle" x="727.87" y="-525.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Change Quantity</text>
 <text text-anchor="middle" x="727.87" y="-512.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">1717</text>
 </g>
@@ -152,14 +152,14 @@
 <polygon fill="#2d137d" stroke="#2d137d" points="509.55,-20.94 499.14,-22.92 508.51,-27.86 509.55,-20.94"/>
 </g>
 <!-- Change Quantity &#45;&gt; Record Invoice Receipt -->
-<g id="node16" class="node">
+<g id="node18" class="node">
 <title>Change Quantity &#45;&gt; Record Invoice Receipt</title>
-<image xlink:href="11.png" width="217px" height="36px" preserveAspectRatio="xMinYMin meet" x="619.374" y="-468"/>
+<image xlink:href="1.png" width="217px" height="36px" preserveAspectRatio="xMinYMin meet" x="619.374" y="-468"/>
 <text text-anchor="middle" x="727.87" y="-453.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Change Quantity &#45;&gt; Record Invoice Receipt</text>
 <text text-anchor="middle" x="727.87" y="-440.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
 <!-- Change Quantity&#45;&gt;Change Quantity &#45;&gt; Record Invoice Receipt -->
-<g id="edge18" class="edge">
+<g id="edge22" class="edge">
 <title>Change Quantity&#45;&gt;Change Quantity &#45;&gt; Record Invoice Receipt</title>
 <path fill="none" stroke="#2d137d" d="M727.87,-504.05C727.87,-496.57 727.87,-487.58 727.87,-479.14"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="731.37,-479.3 727.87,-469.3 724.37,-479.3 731.37,-479.3"/>
@@ -167,19 +167,19 @@
 <!-- Remove Payment Block -->
 <g id="node8" class="node">
 <title>Remove Payment Block</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-252"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-252"/>
 <text text-anchor="middle" x="470.87" y="-237.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Remove Payment Block</text>
 <text text-anchor="middle" x="470.87" y="-224.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">10850</text>
 </g>
 <!-- Remove Payment Block &#45;&gt; Clear Invoice -->
-<g id="node13" class="node">
+<g id="node14" class="node">
 <title>Remove Payment Block &#45;&gt; Clear Invoice</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-180"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="366.874" y="-180"/>
 <text text-anchor="middle" x="470.87" y="-165.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Remove Payment Block &#45;&gt; Clear Invoice</text>
 <text text-anchor="middle" x="470.87" y="-152.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">None</text>
 </g>
 <!-- Remove Payment Block&#45;&gt;Remove Payment Block &#45;&gt; Clear Invoice -->
-<g id="edge12" class="edge">
+<g id="edge14" class="edge">
 <title>Remove Payment Block&#45;&gt;Remove Payment Block &#45;&gt; Clear Invoice</title>
 <path fill="none" stroke="#2d137d" d="M470.87,-216.05C470.87,-208.57 470.87,-199.58 470.87,-191.14"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="474.37,-191.3 470.87,-181.3 467.37,-191.3 474.37,-191.3"/>
@@ -187,7 +187,7 @@
 <!-- Change Price -->
 <g id="node9" class="node">
 <title>Change Price</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="516.874" y="-684"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="516.874" y="-684"/>
 <text text-anchor="middle" x="620.87" y="-669.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Change Price</text>
 <text text-anchor="middle" x="620.87" y="-656.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">1087</text>
 </g>
@@ -200,7 +200,7 @@
 <!-- Delete Purchase Order Item -->
 <g id="node10" class="node">
 <title>Delete Purchase Order Item</title>
-<image xlink:href="11.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="849.874" y="-540"/>
+<image xlink:href="1.png" width="208px" height="36px" preserveAspectRatio="xMinYMin meet" x="849.874" y="-540"/>
 <text text-anchor="middle" x="953.87" y="-525.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">Delete Purchase Order Item</text>
 <text text-anchor="middle" x="953.87" y="-512.4" font-family="Times New Roman,serif" font-size="12.00" fill="#2d137d">3834</text>
 </g>
@@ -250,41 +250,41 @@
 <path fill="none" stroke="#2d137d" d="M576.65,-723.27C579.71,-722.03 582.82,-720.9 585.87,-720 700.7,-686.04 747.85,-741.51 852.87,-684 904.54,-655.71 933.27,-588.57 945.92,-550.53"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="949.2,-551.77 948.88,-541.18 942.53,-549.66 949.2,-551.77"/>
 </g>
-<!-- Remove Payment Block &#45;&gt; Clear Invoice&#45;&gt;Clear Invoice -->
+<!-- Vendor creates invoice &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
 <g id="edge13" class="edge">
+<title>Vendor creates invoice &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
+<path fill="none" stroke="#2d137d" d="M479.6,-432.05C479.92,-424.57 480.31,-415.58 480.67,-407.14"/>
+<polygon fill="#2d137d" stroke="#2d137d" points="484.16,-407.44 481.09,-397.3 477.16,-407.14 484.16,-407.44"/>
+</g>
+<!-- Remove Payment Block &#45;&gt; Clear Invoice&#45;&gt;Clear Invoice -->
+<g id="edge15" class="edge">
 <title>Remove Payment Block &#45;&gt; Clear Invoice&#45;&gt;Clear Invoice</title>
 <path fill="none" stroke="#2d137d" d="M470.87,-144.05C470.87,-136.57 470.87,-127.58 470.87,-119.14"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="474.37,-119.3 470.87,-109.3 467.37,-119.3 474.37,-119.3"/>
 </g>
-<!-- Create Purchase Order Item &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
-<g id="edge15" class="edge">
-<title>Create Purchase Order Item &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
-<path fill="none" stroke="#2d137d" d="M241.61,-432.05C287.59,-421.9 346.22,-408.95 394.05,-398.39"/>
-<polygon fill="#2d137d" stroke="#2d137d" points="394.53,-401.87 403.54,-396.3 393.02,-395.04 394.53,-401.87"/>
-</g>
-<!-- Record Invoice Receipt &#45;&gt; Remove Payment Block&#45;&gt;Remove Payment Block -->
-<g id="edge17" class="edge">
-<title>Record Invoice Receipt &#45;&gt; Remove Payment Block&#45;&gt;Remove Payment Block</title>
-<path fill="none" stroke="#2d137d" d="M479.21,-288.05C478.04,-280.57 476.62,-271.58 475.3,-263.14"/>
-<polygon fill="#2d137d" stroke="#2d137d" points="478.76,-262.62 473.75,-253.28 471.84,-263.71 478.76,-262.62"/>
-</g>
-<!-- Change Quantity &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
-<g id="edge19" class="edge">
-<title>Change Quantity &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
-<path fill="none" stroke="#2d137d" d="M668.32,-432.05C633.25,-422.07 588.7,-409.4 551.94,-398.94"/>
-<polygon fill="#2d137d" stroke="#2d137d" points="553.33,-395.7 542.76,-396.32 551.42,-402.43 553.33,-395.7"/>
-</g>
 <!-- Record Invoice Receipt &#45;&gt; Clear Invoice&#45;&gt;Clear Invoice -->
-<g id="edge21" class="edge">
+<g id="edge17" class="edge">
 <title>Record Invoice Receipt &#45;&gt; Clear Invoice&#45;&gt;Clear Invoice</title>
 <path fill="none" stroke="#2d137d" d="M678.27,-216.15C656.64,-197.1 619.36,-165.9 583.87,-144 564.8,-132.23 542.7,-121.32 523.13,-112.5"/>
 <polygon fill="#2d137d" stroke="#2d137d" points="524.8,-109.41 514.24,-108.56 521.96,-115.81 524.8,-109.41"/>
 </g>
-<!-- Vendor creates invoice &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
+<!-- Record Invoice Receipt &#45;&gt; Remove Payment Block&#45;&gt;Remove Payment Block -->
+<g id="edge19" class="edge">
+<title>Record Invoice Receipt &#45;&gt; Remove Payment Block&#45;&gt;Remove Payment Block</title>
+<path fill="none" stroke="#2d137d" d="M479.21,-288.05C478.04,-280.57 476.62,-271.58 475.3,-263.14"/>
+<polygon fill="#2d137d" stroke="#2d137d" points="478.76,-262.62 473.75,-253.28 471.84,-263.71 478.76,-262.62"/>
+</g>
+<!-- Create Purchase Order Item &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
+<g id="edge21" class="edge">
+<title>Create Purchase Order Item &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
+<path fill="none" stroke="#2d137d" d="M241.61,-432.05C287.59,-421.9 346.22,-408.95 394.05,-398.39"/>
+<polygon fill="#2d137d" stroke="#2d137d" points="394.53,-401.87 403.54,-396.3 393.02,-395.04 394.53,-401.87"/>
+</g>
+<!-- Change Quantity &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt -->
 <g id="edge23" class="edge">
-<title>Vendor creates invoice &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
-<path fill="none" stroke="#2d137d" d="M479.6,-432.05C479.92,-424.57 480.31,-415.58 480.67,-407.14"/>
-<polygon fill="#2d137d" stroke="#2d137d" points="484.16,-407.44 481.09,-397.3 477.16,-407.14 484.16,-407.44"/>
+<title>Change Quantity &#45;&gt; Record Invoice Receipt&#45;&gt;Record Invoice Receipt</title>
+<path fill="none" stroke="#2d137d" d="M668.32,-432.05C633.25,-422.07 588.7,-409.4 551.94,-398.94"/>
+<polygon fill="#2d137d" stroke="#2d137d" points="553.33,-395.7 542.76,-396.32 551.42,-402.43 553.33,-395.7"/>
 </g>
 <!-- Change Price,Receive Order Confirmation &#45;&gt; Vendor creates invoice,Delete Purchase Order Item&#45;&gt;Vendor creates invoice -->
 <g id="edge26" class="edge">

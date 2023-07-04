@@ -13,7 +13,7 @@ import pandas as pd
 import graphviz as gz
 
 
-def  initializating_pm():
+def initializating_pm():
 
     #Получение и обработка БД
     #Поключение к clickhouse
@@ -89,8 +89,9 @@ def  initializating_pm():
         except:
             print('ошибочка')
         
-        painter = GraphvizPainter()
-        painter.apply(elem, node_style_metric='count', edge_style_metric='count')
+        #painter = GraphvizPainter()
+        #painter.apply(elem)#, node_style_metric='count', edge_style_metric='count')
+        #painter.save('qwerty'+str(index)+'.svg', 'svg')
 
         custom_graph(elem.nodes, elem.edges, 'graph' + str(index), format='svg')
 

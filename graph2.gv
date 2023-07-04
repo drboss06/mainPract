@@ -1,5 +1,5 @@
 digraph graph2 {
-	node [color="#2d137d" fontcolor="#2d137d" fontsize=12.0 image="11.png" shape=plaintext size=2]
+	node [color="#2d137d" fontcolor="#2d137d" fontsize=12.0 image="1.png" shape=plaintext size=2]
 	edge [color="#2d137d" fontcolor="#2d137d" fontsize=9.0]
 	"Create Purchase Order Item" [label="Create Purchase Order Item
 63797"]
@@ -33,17 +33,17 @@ digraph graph2 {
 	"Record Goods Receipt" -> endevent
 	"Delete Purchase Order Item" -> endevent
 	"Create Purchase Order Item" -> endevent
-	"Remove Payment Block" -> "Clear Invoice" [label=10850]
-	"Receive Order Confirmation" -> "Record Goods Receipt" [label=3795]
-	"Change Price" -> "Vendor creates invoice" [label=812]
-	"Record Invoice Receipt" -> "Remove Payment Block" [label=6003]
-	"Change Quantity" -> "Record Invoice Receipt" [label=5]
-	"Receive Order Confirmation" -> "Vendor creates invoice" [label=2584]
-	"Record Goods Receipt" -> "Remove Payment Block" [label=4847]
-	"Receive Order Confirmation" -> "Delete Purchase Order Item" [label=465]
-	"Record Invoice Receipt" -> "Clear Invoice" [label=42475]
-	"Create Purchase Order Item" -> "Record Goods Receipt" [label=20497]
-	"Record Goods Receipt" -> "Clear Invoice" [label=1]
-	"Change Price" -> "Record Goods Receipt" [label=254]
 	"Vendor creates invoice" -> "Record Invoice Receipt" [label=22799]
+	"Remove Payment Block" -> "Clear Invoice" [label=10850]
+	"Change Price" -> "Vendor creates invoice" [label=812]
+	"Receive Order Confirmation" -> "Record Goods Receipt" [label=3795]
+	"Receive Order Confirmation" -> "Delete Purchase Order Item" [label=465]
+	"Create Purchase Order Item" -> "Record Goods Receipt" [label=20497]
+	"Record Invoice Receipt" -> "Clear Invoice" [label=42475]
+	"Record Invoice Receipt" -> "Remove Payment Block" [label=6003]
+	"Receive Order Confirmation" -> "Vendor creates invoice" [label=2584]
+	"Record Goods Receipt" -> "Clear Invoice" [label=1]
+	"Record Goods Receipt" -> "Remove Payment Block" [label=4847]
+	"Change Quantity" -> "Record Invoice Receipt" [label=5]
+	"Change Price" -> "Record Goods Receipt" [label=254]
 }

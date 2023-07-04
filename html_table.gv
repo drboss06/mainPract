@@ -1,8 +1,0 @@
-graph html_table {
-	tab [label=<<TABLE>
- <TR>
-   <TD>'1.png'</TD>
-   <TD>right</TD>
- </TR>
-</TABLE>>]
-}
