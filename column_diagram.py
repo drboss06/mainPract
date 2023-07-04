@@ -81,7 +81,7 @@ class Calc_diagrams():
             my_start = my_start + step + 1
             my_date = my_date + timedelta(days=step + 1)
 
-        logging.info("call calc_diagram_days")
+        logging.info(f"call calc_diagram_days: {list_days}")
         # для получения часов/минут перевести my_start, step_end
         return list_days
 
@@ -98,7 +98,7 @@ class Calc_diagrams():
         for i in data.result_rows:
             list_month[i[1].month - 1][0] = list_month[i[1].month - 1][0] + i[0]
 
-        logging.info("call calc_diagram_months")
+        logging.info(f"call calc_diagram_months: {list_month}")
         return list_month
 
 
