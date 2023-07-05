@@ -5,12 +5,13 @@ import networkx as nx
 from networkx.algorithms import isomorphism
 
 class Connect:
-    def __init__(self, client=None, graphs=None, top_variables=None, other_variables=None,logfile=None):
+    def __init__(self, client=None, graphs=None, top_variables=None, other_variables=None, logfile=None, top_combine_variables=None):
         self.client = None
         self.graphs = None
         self.top_variables = None
         self.other_variables = None
         self.logfile = None
+        self.top_combine_variables = None
 
     def apply(self,client,graphs):
         self.client = client
@@ -28,7 +29,7 @@ class Connect:
 
     def combine_variables_isomorph(self):
         result_top = self.top_variables
-        combine_top = []
+        self.top_combine_variables = []
         result_other = self.other_variables
         for (index,res) in enumerate(result_top):
             a = (str(index), res)
@@ -41,7 +42,7 @@ class Connect:
                 except:
                     k = 0
             for res2 in result_other:
-                #combine_top.append(a)
+                #self.top_combine_variables.append(a)
                 #common_paths = [p for p in res[2] if p in res2[2] and p in res[2][res[2].index(p):]]
                 #similarity = (len(common_paths)/1.5) / len(res[2])
                 #if similarity >= 0.8:
@@ -56,18 +57,18 @@ class Connect:
                 if GM.is_isomorphic():
                     b = (str(index), res2)
                     print(b)
-                    combine_top.append(b)
+                    self.top_combine_variables.append(b)
                     result_other.remove(res2)
         logging.info('combine variables')
-        return(combine_top)
+        return(self.top_combine_variables)
 
     def combine_variables(self):
         result_top = self.top_variables
-        combine_top = []
+        self.top_combine_variables = []
         result_other = self.other_variables
         for (i,elem) in enumerate(result_top):
             a = (str(i), elem)
-            combine_top.append(a)
+            self.top_combine_variables.append(a)
             list1 = elem[2]
             print(a)
             for (e,elem2) in enumerate(result_other):
@@ -85,11 +86,11 @@ class Connect:
 
                     if seq_list1 == seq_list2:
                         b = (str(i), elem2)
-                        combine_top.append(b)
+                        self.top_combine_variables.append(b)
+                        self.other_variables.remove(elem2)
                         print(b)
                 continue
-
-        return (combine_top)
+        return (self.top_combine_variables)
 
 
 
