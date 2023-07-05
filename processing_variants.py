@@ -5,11 +5,12 @@ import networkx as nx
 from networkx.algorithms import isomorphism
 
 class Connect:
-    def __init__(self, client=None, graphs=None, top_variables=None, other_variables=None):
+    def __init__(self, client=None, graphs=None, top_variables=None, other_variables=None,logfile=None):
         self.client = None
         self.graphs = None
         self.top_variables = None
         self.other_variables = None
+        self.logfile = None
 
     def apply(self,client,graphs):
         self.client = client
@@ -23,6 +24,7 @@ class Connect:
                 self.top_variables.append(item)
             else:
                 self.other_variables.append(item)
+        logging.info('get a query')
 
     def combine_variables(self):
         result_top = self.top_variables
@@ -56,6 +58,7 @@ class Connect:
                     print(b)
                     combine_top.append(b)
                     result_other.remove(res2)
+        logging.info('combine variables')
         return(combine_top)
 
 
