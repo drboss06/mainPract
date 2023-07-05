@@ -33,17 +33,17 @@ digraph graph2 {
 	"Create Purchase Order Item" -> endevent
 	"Delete Purchase Order Item" -> endevent
 	"Record Goods Receipt" -> endevent
-	"Record Invoice Receipt" -> "Clear Invoice" [label=0.0]
 	"Receive Order Confirmation" -> "Delete Purchase Order Item" [label=0.0]
-	"Receive Order Confirmation" -> "Record Goods Receipt" [label=0.0]
+	"Record Invoice Receipt" -> "Remove Payment Block" [label=0.0]
+	"Record Invoice Receipt" -> "Clear Invoice" [label=0.0]
+	"Create Purchase Order Item" -> "Record Goods Receipt" [label=0.0]
 	"Record Goods Receipt" -> "Remove Payment Block" [label=0.0]
 	"Remove Payment Block" -> "Clear Invoice" [label=0.0]
 	"Record Goods Receipt" -> "Clear Invoice" [label=0.0]
-	"Change Price" -> "Vendor creates invoice" [label=0.0]
-	"Change Quantity" -> "Record Invoice Receipt" [label=0.0]
-	"Create Purchase Order Item" -> "Record Goods Receipt" [label=0.0]
 	"Vendor creates invoice" -> "Record Invoice Receipt" [label=0.0]
-	"Record Invoice Receipt" -> "Remove Payment Block" [label=0.0]
-	"Receive Order Confirmation" -> "Vendor creates invoice" [label=0.0]
+	"Change Quantity" -> "Record Invoice Receipt" [label=0.0]
 	"Change Price" -> "Record Goods Receipt" [label=0.0]
+	"Receive Order Confirmation" -> "Record Goods Receipt" [label=0.0]
+	"Change Price" -> "Vendor creates invoice" [label=0.0]
+	"Receive Order Confirmation" -> "Vendor creates invoice" [label=0.0]
 }

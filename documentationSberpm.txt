@@ -1561,3 +1561,5 @@ cr = Chronometrage(dh,
 res = cr.get_chrono()
 
 res
+
+

@@ -46,9 +46,10 @@ def  initializating_pm():
     data_holder.get_grouped_data(data_holder.activity_column, data_holder.start_timestamp_column).head()
 
     activity_metric = ActivityMetric(data_holder,time_unit='d')
+    activity_metric.calculate_time_metrics()
     activity_metric.apply().head()
     count_metric = activity_metric.count().to_dict()
-
+    time_metric = activity_metric.mean_duration().to_dict()
     #transition_metric = TransitionMetric(data_holder,time_unit='d')
     #transition_metric.apply().head()
     #edges_count_metric = activity_metric.count().to_dict()
