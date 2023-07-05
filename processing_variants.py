@@ -1,6 +1,6 @@
 import clickhouse_connect
 import logging
-import array as arr
+from itertools import permutations
 import networkx as nx
 from networkx.algorithms import isomorphism
 
@@ -26,7 +26,7 @@ class Connect:
                 self.other_variables.append(item)
         logging.info('get a query')
 
-    def combine_variables(self):
+    def combine_variables_isomorph(self):
         result_top = self.top_variables
         combine_top = []
         result_other = self.other_variables
@@ -61,6 +61,36 @@ class Connect:
         logging.info('combine variables')
         return(combine_top)
 
+    def combine_variables(self):
+        result_top = self.top_variables
+        combine_top = []
+        result_other = self.other_variables
+        for (i,elem) in enumerate(result_top):
+            a = (str(i), elem)
+            combine_top.append(a)
+            list1 = elem[2]
+            print(a)
+            for (e,elem2) in enumerate(result_other):
+                list2 = elem2[2]
+                if set(list1) != set(list2):
+                    continue
+
+                # Получение всех перестановок списка list1
+                perm_list1 = list(permutations(list1, len(list1)))
+
+                # Проверка схожести списков с учетом перестановок
+                for perm in perm_list1:
+                    seq_list1 = list(perm)
+                    seq_list2 = list2[:len(seq_list1)]
+
+                    if seq_list1 == seq_list2:
+                        b = (str(i), elem2)
+                        combine_top.append(b)
+                        print(b)
+                continue
+
+        return (combine_top)
+
 
 
 
@@ -73,6 +103,7 @@ if __name__ == '__main__':
                           'toString(start_time)]))) as a  from main_table group by case_id) group by a order by count(case_id) desc')
     connect = Connect()
     connect.apply(client, graphs)
+    #connect.combine_variables_isomorph()
     connect.combine_variables()
     #print(connect.top_variables)
     print()
